@@ -51,12 +51,6 @@ for ( let [key, value] of Object.entries(trends)){
             }
             index++;
             if(index == 23){
-                // var try_it = "Will Artificial Intelligence and robots rule?"; 
-                // try_it = try_it.split(" ").join(", ");
-                // var try_it2 = "Will climate change?"; 
-                // try_it2 = try_it2.split(" ").join(", ");
-                // console.log(await classifier.categorize(try_it));
-                // console.log(await classifier.categorize(try_it2)); 
                 var stateJson = classifier.toJson();
                 fs.writeFile("./classyFire.json", stateJson, function(error,data){
                     if (error){
