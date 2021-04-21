@@ -12,16 +12,14 @@ var classifier = bayes();
 const alphanumeric = /^[0-9a-zA-Z,';]+$/; 
 //using trending words on twitter to affiliate those tweets with certain categories
 var trends = {
-    "couple": "love", 
-    "Marriage Story": "love", 
-    "#relationshipgoals": "love", 
-    "V-Day": "love", 
-    "Valentine's Day": "love", 
-    "Venmo": "career",
+    "AI": "tech",
+    "blockchain": "tech",
+    "iPhone": "tech", 
+    "Touch ID": "tech", 
+    "cryptocurrency": "tech", 
     "finance": "career", 
     "WeWork": "career",
     "market": "career",
-    "#dogecoin": "career",
     "forecast": "weather", 
     "climate": "weather", 
     "#meteorology": "weather",
@@ -32,12 +30,11 @@ var trends = {
     "disease": "death", 
     "Herpes": "death",
     "Shingles": "death",
-    "AI": "tech",
-    "blockchain": "tech",
-    "iPhone": "tech", 
-    "Touch ID": "tech", 
-    "cryptocurrency": "tech" 
-
+    "Praise God": "love", 
+    "just married": "love", 
+    "#relationshipgoals": "love", 
+    "V-Day": "love", 
+    "Valentine's Day": "love"
 }
 
 //keeps track of where we are in the loop 
@@ -53,7 +50,7 @@ for ( let [key, value] of Object.entries(trends)){
                 await classifier.learn(final_words, value);
             }
             index++;
-            if(index == 25){
+            if(index == 23){
                 // var try_it = "Will Artificial Intelligence and robots rule?"; 
                 // try_it = try_it.split(" ").join(", ");
                 // var try_it2 = "Will climate change?"; 

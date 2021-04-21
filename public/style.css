@@ -1,0 +1,7 @@
+body{
+    background-image: url(images/starry.gif);
+}
+
+rect{
+    box-shadow: 5px, 7px, #ffff;
+}

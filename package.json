@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "bayes": "^1.0.0",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "socket.io": "^4.0.1",
+    "sockets": "^0.4.2",
     "stopword": "^1.0.7",
     "stopwords": "0.0.9",
     "twit": "^2.2.11"
